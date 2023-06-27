@@ -2,53 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Personal Portfolio</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">My Portfolio</div>
-            <ul class="nav">
-                <li><a href="#intro">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="banner"></div>
-        <div class="intro" id="intro">
-            <h1>Hello, I'm John Doe.</h1>
-            <p>I'm a web developer based in Houston, Texas. I love creating beautiful and functional websites using HTML, CSS and JavaScript.</p>
-        </div>
-        <div class="skills" id="skills">
-            <div class="skill">
-                <img src="html.png" alt="HTML">
-                <h3>HTML</h3>
-            </div>
-            <div class="skill">
-                <img src="css.png" alt="CSS">
-                <h3>CSS</h3>
-            </div>
-            <div class="skill">
-                <img src="js.png" alt="JavaScript">
-                <h3>JavaScript</h3>
-            </div>
-        </div>
-        <div class="projects" id="projects">
-            <h2>Some of my recent projects</h2>
+<div id="header">
+    <div class="=container">
+        <nav>
+            <img src="images/logo4.png" class="logo">
             <ul>
-                <li><img src="project1.jpg" alt="Project 1"></li>
-                <li><img src="project2.jpg" alt="Project 2"></li>
-                <li><img src="project3.jpg" alt="Project 3"></li>
-                <li><img src="project4.jpg" alt="Project 4"></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Ben</span><br>John From Houston</h1>
         </div>
-        <div class="footer" id="contact">
-            <p>&copy; 2023 John Doe. All rights reserved.</p>
-            <p>Email: johndoe@example.com | Phone: +1 (123) 456-7890</p>
+    </div>
+</div>
+<!-------------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit 
+                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                occaecat cupidatat non proident, sunt in culpa qui officia 
+                deserunt mollit anim id est laborum.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI?UX</span><br>Designing Web/App interaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - Current</span><br>UI/UX Design Training at ET
+                        Institute</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016</span><br>UI/UX Design Training</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div> 
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+</script>
 </body>
 </html>
